@@ -12,6 +12,4 @@ const opacityButtons = () => {
   })
 
 }
-console.log("desde Utils")
-
 export default opacityButtons;

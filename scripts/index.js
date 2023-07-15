@@ -28,11 +28,24 @@ const initialCards = [
     link: "https://q-xx.bstatic.com/xdata/images/city/600x480/671802.jpg?k=f2af7c265359c6bfef67dd8137aae05a987d3df4208c8423068a807acc405ad3&o=",
   },
 ];
+/* FUNCION PARA CARGAR CARDS INICIALES */
+const renderInitialCards = () => {
+  initialCards.forEach(initialCard => {
+    console.log(initialCard)
+    const cardContainer = document.querySelector('.card');
+    console.log(cardContainer);
+    const elementCard = document.querySelector('.card__place-image-place');
 
+  })
 
+}
+renderInitialCards()
 
-initialCards.forEach(card => {
-  console.log(card)
-})
+/* const card = document.querySelector('.card');
+console.log(card);
+const templateCard = document.querySelector('.card__place').content;
+const elementCard = templateCard.querySelector('.card__place').clonNode(true);
+elementCard.querySelector(".card__place-name").textContent = `${initialCard.name}`;
+console.log(elementCard) */
 
 
