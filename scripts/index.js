@@ -33,17 +33,18 @@ const initialCards = [
 const renderCardInitial = () => {
   const cardContainer = document.querySelector(".container-card");
   const templatecard = document.querySelector('.card').content;
+  const elementCard = templatecard.querySelector('.card__place').cloneNode(true);
   cardContainer.appendChild(elementCard);
   initialCards.forEach(initialCard => {
     console.log(initialCard.name)
     console.log(initialCard.link)
 
-    const elementCard = templatecard.querySelector('.card__place').cloneNode(true);
     elementCard.querySelector('.card__place-image-place').setAttribute('src', initialCard.link);
     elementCard.querySelector('.card__place-image-place').setAttribute('alt', initialCard.name);
     elementCard.querySelector('.card__place-name').textContent = initialCard.name;
 
   })
+  cardContainer.appendChild(elementCard);
 }
 renderCardInitial()
 
