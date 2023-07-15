@@ -1,4 +1,4 @@
-import opacityButtons  from "./utils.js"
+import opacityButtons from "./utils.js"
 
 
 opacityButtons()
@@ -29,23 +29,24 @@ const initialCards = [
   },
 ];
 /* FUNCION PARA CARGAR CARDS INICIALES */
-const renderInitialCards = () => {
+
+const renderCardInitial = () => {
+  const cardContainer = document.querySelector(".container-card");
+  const templatecard = document.querySelector('.card').content;
+  cardContainer.appendChild(elementCard);
   initialCards.forEach(initialCard => {
-    console.log(initialCard)
-    const cardContainer = document.querySelector('.card');
-    console.log(cardContainer);
-    const elementCard = document.querySelector('.card__place-image-place');
+    console.log(initialCard.name)
+    console.log(initialCard.link)
+
+    const elementCard = templatecard.querySelector('.card__place').cloneNode(true);
+    elementCard.querySelector('.card__place-image-place').setAttribute('src', initialCard.link);
+    elementCard.querySelector('.card__place-image-place').setAttribute('alt', initialCard.name);
+    elementCard.querySelector('.card__place-name').textContent = initialCard.name;
 
   })
-
 }
-renderInitialCards()
+renderCardInitial()
 
-/* const card = document.querySelector('.card');
-console.log(card);
-const templateCard = document.querySelector('.card__place').content;
-const elementCard = templateCard.querySelector('.card__place').clonNode(true);
-elementCard.querySelector(".card__place-name").textContent = `${initialCard.name}`;
-console.log(elementCard) */
+
 
 
