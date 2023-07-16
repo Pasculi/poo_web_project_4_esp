@@ -31,19 +31,18 @@ const initialCards = [
 /* FUNCION PARA CARGAR CARDS INICIALES */
 const renderCardInitial = () => {
 
-  const cardContainer = document.querySelector(".container-card");
-  const templatecard = document.querySelector(".card").content;
-  const fragment = document.createDocumentFragment();
-
+  const cardContainer = document.querySelector(".container-card");//Donde se renderizarán las Card
+  const templatecard = document.querySelector('.card');//Seleccionamos la etiqueta template
   initialCards.forEach(initialCard => {
-    templatecard.querySelector('.card__place-name').textContent = initialCard.name;
-    templatecard.querySelector('.card__place-image-place').setAttribute("src", initialCard.link);
-    templatecard.querySelector('.card__place-image-place').setAttribute("alt", initialCard.name);
-    let elementCard = document.importNode(templatecard, true);
-    fragment.prepend(elementCard)
+    const dataCard = templatecard.content.cloneNode(true);//Clonamos el contenido de template
+    /*Seleccionamos cada elemento de la card y los cambiamos dinámicamente */
+    dataCard.querySelector('.card__place-name').textContent = initialCard.name;
+    dataCard.querySelector('.card__place-image-place').setAttribute("src", initialCard.link);
+    dataCard.querySelector('.card__place-image-place').setAttribute("alt", initialCard.name);
+    console.log("🚀 ~ file: index.js:36 ~ renderCardInitial ~ templatecard:", dataCard)
+    //Pintamos las Card en container-card
+    cardContainer.appendChild(dataCard);
   })
-
-  cardContainer.prepend(fragment);
 }
 renderCardInitial()
 

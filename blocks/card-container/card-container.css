@@ -1,7 +1,6 @@
-.card-container {
-  padding-top          : 2.89rem;
+.container-card{
+  height: fit-content;
   display              : grid;
-  width: 100%;
   grid-template-columns: 1fr 1fr 1fr;
   row-gap              : 1.25rem;
   column-gap           : 1.125rem;
@@ -9,7 +8,7 @@
 }
 
 @media screen and (max-width: 886px) {
-  .card-container {
+  .container-card{
     grid-template-columns: 1fr 1fr;
     margin               : auto;
     justify-content      : center;
@@ -18,7 +17,7 @@
 }
 
 @media screen and (max-width: 589px) {
-  .card-container {
+  .container-card{
     grid-template-columns: 1fr;
     margin               : auto;
     justify-content      : center;
