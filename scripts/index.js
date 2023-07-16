@@ -1,4 +1,5 @@
-import opacityButtons from "./utils.js"
+import { opacityButtons, buttonLike, buttonDeleteCard } from "./utils.js"
+
 
 
 opacityButtons()
@@ -29,6 +30,7 @@ const initialCards = [
   },
 ];
 /* FUNCION PARA CARGAR CARDS INICIALES */
+
 const renderCardInitial = () => {
 
   const cardContainer = document.querySelector(".container-card");//Donde se renderizarán las Card
@@ -36,16 +38,16 @@ const renderCardInitial = () => {
   initialCards.forEach(initialCard => {
     const dataCard = templatecard.content.cloneNode(true);//Clonamos el contenido de template
     /*Seleccionamos cada elemento de la card y los cambiamos dinámicamente */
+    dataCard.querySelector('.card__place-button--delete').addEventListener('click', buttonDeleteCard);//Llamamos a la funcion eliminar card
     dataCard.querySelector('.card__place-name').textContent = initialCard.name;
     dataCard.querySelector('.card__place-image-place').setAttribute("src", initialCard.link);
     dataCard.querySelector('.card__place-image-place').setAttribute("alt", initialCard.name);
-    console.log("🚀 ~ file: index.js:36 ~ renderCardInitial ~ templatecard:", dataCard)
+    dataCard.querySelector(".card__place-button--like").addEventListener("click", buttonLike);//Lllamamos a la funcion de dar like
     //Pintamos las Card en container-card
-    cardContainer.appendChild(dataCard);
+    cardContainer.prepend(dataCard);
   })
 }
 renderCardInitial()
-
 
 
 

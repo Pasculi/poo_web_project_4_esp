@@ -1,3 +1,4 @@
+/*Función que aplica opacidad a los botones editar, añadir lugar y a las X de cerrar */
 const opacityButtons = () => {
   const btns = Array.from(document.querySelectorAll('.btn'));
   btns.forEach(btn => {
@@ -12,4 +13,15 @@ const opacityButtons = () => {
   })
 
 }
-export default opacityButtons;
+
+/*Funcion para dar like al corazón*/
+const buttonLike = (evt) => {
+  evt.target.classList.toggle("card__place-button--like-active");
+}
+
+/*Función para eliminar una card*/
+const buttonDeleteCard = (evt) => {
+  evt.target.parentNode.parentNode.remove();
+}
+
+export { opacityButtons, buttonLike, buttonDeleteCard };
