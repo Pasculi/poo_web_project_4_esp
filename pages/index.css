@@ -27,6 +27,11 @@
 @import url(../blocks/profile/__activiti/profile__activiti.css);
 @import url(../blocks/profile/__data/profile__data.css);
 
+
+/*CONTAINER-CARDS*/
+@import url(../blocks/card-container/card-container.css);
+
+
 /*CARDS*/
 @import url(../blocks/card/card.css);
 @import url(../blocks/card/__place/card__place.css);

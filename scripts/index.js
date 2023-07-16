@@ -29,22 +29,21 @@ const initialCards = [
   },
 ];
 /* FUNCION PARA CARGAR CARDS INICIALES */
-
 const renderCardInitial = () => {
+
   const cardContainer = document.querySelector(".container-card");
-  const templatecard = document.querySelector('.card').content;
-  const elementCard = templatecard.querySelector('.card__place').cloneNode(true);
-  cardContainer.appendChild(elementCard);
+  const templatecard = document.querySelector(".card").content;
+  const fragment = document.createDocumentFragment();
+
   initialCards.forEach(initialCard => {
-    console.log(initialCard.name)
-    console.log(initialCard.link)
-
-    elementCard.querySelector('.card__place-image-place').setAttribute('src', initialCard.link);
-    elementCard.querySelector('.card__place-image-place').setAttribute('alt', initialCard.name);
-    elementCard.querySelector('.card__place-name').textContent = initialCard.name;
-
+    templatecard.querySelector('.card__place-name').textContent = initialCard.name;
+    templatecard.querySelector('.card__place-image-place').setAttribute("src", initialCard.link);
+    templatecard.querySelector('.card__place-image-place').setAttribute("alt", initialCard.name);
+    let elementCard = document.importNode(templatecard, true);
+    fragment.prepend(elementCard)
   })
-  cardContainer.appendChild(elementCard);
+
+  cardContainer.prepend(fragment);
 }
 renderCardInitial()
 
