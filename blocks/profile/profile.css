@@ -6,8 +6,16 @@
   padding-top    : 2.266rem;
 }
 
-@media screen and (max-width: 887px) {
+
+@media screen and (max-width: 892px){
+  .profile {
+  flex-direction: column;
+}
+}
+
+@media screen and (max-width: 584px) {
   .profile {
     flex-direction: column;
+    width: 282px;
   }
 }
