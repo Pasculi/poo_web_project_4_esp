@@ -61,99 +61,104 @@
       <!-- FIN PLANTILLA CARDS -->
       <!-- INICIO MODAL PERFIL -->
       <div class="popup">
-        <button class="popup__button-close">
-          <img
-            class="popup__close-image"
-            src="images/vector__close.png"
-            alt="Cerrar popup"
-          />
-        </button>
-        <form action="" class="popup__form">
-          <h2 class="popup__title">Edit Profile</h2>
-          <!-- Grupo Input Nombre -->
-          <div class="popup__grupo-input">
-            <input
-              class="popup__input"
-              type="text"
-              name="nombre"
-              id="popup-input-profile"
-              placeholder="Jacques Cousteau"
-              pattern="[A-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙ ]+"
-              minlength="2"
-              maxlength="40"
-              required
+        <div class="popup__container">
+          <button class="btn popup__button-close">
+            <img
+              class="popup__close-image"
+              src="images/vector__close.png"
+              alt="Cerrar popup"
             />
-            <span
-              class="popup__form-input-error popup-input-profile-error"
-            ></span>
-          </div>
-          <!-- Grupo Input Acerca -->
-          <div class="popup__grupo-input">
-            <input
-              class="popup__input"
-              type="text"
-              name="nombre"
-              id="popup-input-about"
-              placeholder="Explorador"
-              pattern="[A-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙ ]+"
-              minlength="2"
-              maxlength="40"
-              required
-            />
-            <span
-              class="popup__form-input-error popup-input-about-error"
-            ></span>
-          </div>
-          <button class="popup__button" type="submit">Guardar</button>
-        </form>
+          </button>
+          <form action="" class="popup__form popup__form-profile">
+            <h2 class="popup__title">Edit Profile</h2>
+            <!-- Grupo Input Nombre -->
+            <div class="popup__grupo-input">
+              <input
+                class="popup__input"
+                type="text"
+                name="nombre"
+                id="popup-input-profile"
+                placeholder="Jacques Cousteau"
+                pattern="[A-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙ ]+"
+                minlength="2"
+                maxlength="40"
+                required
+              />
+              <span
+                class="popup__form-input-error popup-input-profile-error"
+              ></span>
+            </div>
+            <!-- Grupo Input Acerca -->
+            <div class="popup__grupo-input">
+              <input
+                class="popup__input"
+                type="text"
+                name="nombre"
+                id="popup-input-about"
+                placeholder="Explorador"
+                pattern="[A-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙ ]+"
+                minlength="2"
+                maxlength="40"
+                required
+              />
+              <span
+                class="popup__form-input-error popup-input-about-error"
+              ></span>
+            </div>
+            <button class="popup__button" type="submit">Guardar</button>
+          </form>
+        </div>
       </div>
       <!-- FIN MODAL PERFIL -->
       <!-- INICIO MODAL LUGAR -->
       <div class="popup">
-        <button class="popup__button-close">
-          <img
-            class="popup__close-image"
-            src="images/vector__close.png"
-            alt="Cerrar popup"
-          />
-        </button>
-        <form action="" class="popup__form">
-          <h2 class="popup__title">New Place</h2>
-          <!-- Grupo Input Nombre Lugar -->
-          <div class="popup__grupo-input">
-            <input
-              class="popup__input"
-              type="text"
-              name="nombre"
-              id="popup-input-place"
-              placeholder="Title"
-              pattern="[A-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙ ]+"
-              minlength="2"
-              maxlength="40"
-              required
+
+        <div class="popup__container">
+          <button class="btn popup__button-close">
+            <img
+              class="popup__close-image"
+              src="images/vector__close.png"
+              alt="Cerrar popup"
             />
-            <span
-              class="popup__form-input-error popup-input-place-error"
-            ></span>
-          </div>
-          <!-- Grupo Input Url Lugar -->
-          <div class="popup__grupo-input">
-            <input
-              class="popup__input"
-              type="url"
-              name="nombre"
-              id="popup-input-url"
-              placeholder="Enlace a la imagen"
-              pattern="https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z]{2,}(\.[a-zA-Z]{2,})(\.[a-zA-Z]{2,})?\/[a-zA-Z0-9]{2,}|((https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z]{2,}(\.[a-zA-Z]{2,})(\.[a-zA-Z]{2,})?)|(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})?/g;"
-              title="Incluir http://"
-              minlength="2"
-              maxlength="40"
-              required
-            />
-            <span class="popup__form-input-error popup-input-url-error"></span>
-          </div>
-          <button class="popup__button" type="submit">Guardar</button>
-        </form>
+          </button>
+          <form action="" class="popup__form popup__form-place">
+            <h2 class="popup__title">New Place</h2>
+            <!-- Grupo Input Nombre Lugar -->
+            <div class="popup__grupo-input">
+              <input
+                class="popup__input"
+                type="text"
+                name="nombre"
+                id="popup-input-place"
+                placeholder="Title"
+                pattern="[A-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙ ]+"
+                minlength="2"
+                maxlength="40"
+                required
+              />
+              <span
+                class="popup__form-input-error popup-input-place-error"
+              ></span>
+            </div>
+            <!-- Grupo Input Url Lugar -->
+            <div class="popup__grupo-input">
+              <input
+                class="popup__input"
+                type="url"
+                name="nombre"
+                id="popup-input-url"
+                placeholder="Enlace a la imagen"
+                pattern="https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z]{2,}(\.[a-zA-Z]{2,})(\.[a-zA-Z]{2,})?\/[a-zA-Z0-9]{2,}|((https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z]{2,}(\.[a-zA-Z]{2,})(\.[a-zA-Z]{2,})?)|(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})?/g;"
+                title="Incluir http://"
+                minlength="2"
+                maxlength="40"
+                required
+              />
+              <span class="popup__form-input-error popup-input-url-error"></span>
+            </div>
+            <button class="popup__button" type="submit">Guardar</button>
+          </form>
+        </div>
       </div>
       <!-- FIN MODAL LUGAR -->
 

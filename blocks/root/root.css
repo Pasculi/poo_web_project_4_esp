@@ -1,6 +1,5 @@
 .root{
   background-color: var(--color-background-primary);
-  color:var(--color-text-on-primary);
   max-width       : 880px;
   margin          : auto;
   box-sizing      : border-box;
