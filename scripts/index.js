@@ -1,8 +1,7 @@
 import { opacityButtons, buttonLike, buttonDeleteCard } from "./utils.js"
 
-
-
 opacityButtons()
+
 const initialCards = [
   {
     name: "Santiago",
