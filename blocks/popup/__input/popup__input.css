@@ -1,0 +1,13 @@
+.popup__input {
+  width        : 390px;
+  height       : 30px;
+  border       : none;
+  border-bottom: 1px solid black;
+}
+
+@media screen and (max-width: 594px) {
+  .popup__input {
+    width: 90%;
+
+  }
+}
