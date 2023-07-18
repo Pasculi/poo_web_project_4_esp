@@ -47,28 +47,37 @@ const renderCardInitial = () => {
 }
 renderCardInitial()
 
+/*Abrir y cerrar Popup_Form*/
 const editProfile = document.querySelector('.profile__author-button--edit');
 const editPlace = document.querySelector('.profile__author-button--add-place');
-const popups = Array.from(document.querySelectorAll('.popup'));
+const popupProfile = document.querySelector('.popup-profile');
+const popupPlace = document.querySelector('.popup-place');
+const popupCloseProfile = document.querySelector('.popup__button-close-profile');
+const popupClosePlace = document.querySelector('.popup__button-close-place');
 
-popups.forEach(popup => {
-  function showPopup() {
-    popup.classList.add('popup--show')
+const showPopupProfile = () => {
+  popupProfile.classList.add('popup--show')
+}
+const showPopupPlace = () => {
+  popupPlace.classList.add('popup--show')
+}
+editProfile.addEventListener('click', showPopupProfile);
+editPlace.addEventListener('click', showPopupPlace);
+
+
+const closePopupProfile = () => {
+  popupProfile.classList.remove('popup--show');
+}
+const closePopupPlace = () => {
+  popupPlace.classList.remove('popup--show');
+}
+popupCloseProfile.addEventListener('click', closePopupProfile);
+popupClosePlace.addEventListener('click', closePopupPlace);
+
+document.addEventListener('keydown', evt => {
+  if (evt.key === 'Escape') {
+    closePopupProfile()
+    closePopupPlace()
   }
-  editProfile.addEventListener('click', showPopup);
-  editPlace.addEventListener('click', showPopup);
-
-})
-
-const closeFormProfile = document.querySelector('.popup__button-close-profile');
-const closeFormPlace = document.querySelector('.popup__button-close-place');
-const popupFormClose = Array.from(document.querySelectorAll('.popup'))
-
-popupFormClose.forEach(popupClose => {
-  function closePopup() {
-    popupClose.classList.remove('popup--show')
-  }
-
-  closeFormProfile.addEventListener('click', closePopup);
-  closeFormPlace.addEventListener('click', closePopup)
-})
+});
+/*Abrir y cerrar Popup_Form*/
