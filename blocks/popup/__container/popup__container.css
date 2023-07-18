@@ -9,6 +9,7 @@
   justify-content : space-between;
 }
 
+
 @media screen and (max-width: 594px) {
   .popup__container {
     position:absolute;

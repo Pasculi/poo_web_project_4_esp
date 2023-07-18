@@ -17,15 +17,9 @@
   }
 }
 
-@media screen and (max-width: 887px) {
-  .btn-add {
-    margin-right: 0;
-  }
-}
-
-@media screen and (max-width: 587px) {
-  .btn-add {
-    width     : 282px;
-    margin-top: 36px;
+@media screen and (max-width: 812px) {
+  .profile__author-button--add-place {
+    width: 282px;
+    margin: 0;
   }
 }

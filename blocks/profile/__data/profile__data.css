@@ -2,6 +2,15 @@
   display: flex;
 }
 
+@media screen and (max-width: 812px) {
+  .profile__data {
+    width: 282px;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+}
+
 @media screen and (max-width: 584px) {
   .profile__data {
     flex-direction: column;

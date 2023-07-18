@@ -5,13 +5,22 @@
   margin: auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 899px) {
   .header {
-    justify-content: flex-start;
     padding-top: 45px;
+    width: 551px;
   }
 
 
 }
 
+@media screen and (max-width: 812px) {
+  .header {
+    padding-top: 45px;
+    width      : 282px;
+
+  }
+
+
+}
 
