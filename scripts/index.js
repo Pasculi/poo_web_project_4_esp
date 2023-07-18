@@ -1,7 +1,6 @@
 import { opacityButtons, buttonLike, buttonDeleteCard } from "./utils.js"
 
 opacityButtons()
-
 const initialCards = [
   {
     name: "Santiago",
@@ -48,6 +47,28 @@ const renderCardInitial = () => {
 }
 renderCardInitial()
 
+const editProfile = document.querySelector('.profile__author-button--edit');
+const editPlace = document.querySelector('.profile__author-button--add-place');
+const popups = Array.from(document.querySelectorAll('.popup'));
 
+popups.forEach(popup => {
+  function showPopup() {
+    popup.classList.add('popup--show')
+  }
+  editProfile.addEventListener('click', showPopup);
+  editPlace.addEventListener('click', showPopup);
 
-console.log(document.forms)
+})
+
+const closeFormProfile = document.querySelector('.popup__button-close-profile');
+const closeFormPlace = document.querySelector('.popup__button-close-place');
+const popupFormClose = Array.from(document.querySelectorAll('.popup'))
+
+popupFormClose.forEach(popupClose => {
+  function closePopup() {
+    popupClose.classList.remove('popup--show')
+  }
+
+  closeFormProfile.addEventListener('click', closePopup);
+  closeFormPlace.addEventListener('click', closePopup)
+})
