@@ -50,3 +50,4 @@ renderCardInitial()
 
 
 
+console.log(document.forms)

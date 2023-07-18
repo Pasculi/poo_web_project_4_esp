@@ -24,4 +24,6 @@ const buttonDeleteCard = (evt) => {
   evt.target.parentNode.parentNode.remove();
 }
 
+const btn = Array.from(document.querySelectorAll('.btn'));
+console.log(btn)
 export { opacityButtons, buttonLike, buttonDeleteCard };
