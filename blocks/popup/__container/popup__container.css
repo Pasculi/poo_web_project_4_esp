@@ -10,12 +10,12 @@
 }
 
 
-@media screen and (max-width: 594px) {
+@media screen and (max-width:812px){
   .popup__container {
-    position:absolute;
-    top:90px;
-    width : 90%;
-    width : 308px;
-    height: 378px;
+    margin: auto;
+    top:65px;
+    left:256px;
+    width: 300px;
+    height: 374px;
   }
 }

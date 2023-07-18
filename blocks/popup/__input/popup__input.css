@@ -6,7 +6,7 @@
   font-size: .875rem;
 }
 
-@media screen and (max-width: 594px) {
+@media screen and (max-width: 812px) {
   .popup__input {
     width: 90%;
 
