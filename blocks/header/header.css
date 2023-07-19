@@ -5,7 +5,7 @@
   margin: auto;
 }
 
-@media screen and (max-width: 899px) {
+@media screen and (max-width: 934px) {
   .header {
     padding-top: 45px;
     width: 551px;
@@ -13,14 +13,26 @@
 
 
 }
-
-@media screen and (max-width: 812px) {
+@media screen and (max-width: 835px) {
   .header {
     padding-top: 45px;
     width      : 282px;
+    margin-left:126.094px;
 
   }
 
 
 }
+@media screen and (max-width:768px) {
+  .header {
+    width: 500px;
+  }
+}
 
+@media screen and (max-width:644px) {
+  .header {
+    width: fit-content;
+    margin: 0;
+    align-items: flex-start;
+  }
+}

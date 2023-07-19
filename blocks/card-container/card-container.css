@@ -1,7 +1,8 @@
 .container-card{
-  width: 100%;
+  width: fit-content;
   height: fit-content;
   display              : grid;
+  justify-items: center;
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   row-gap              : 1.25rem;
@@ -9,17 +10,25 @@
   padding-bottom: 100px;
 }
 
-@media screen and (max-width: 899px) {
+@media screen and (max-width: 920px) {
   .container-card{
     grid-template-columns: 1fr 1fr;
-    width: 70%;
-    margin: auto;
+    margin:auto;
+
   }
 }
 
-@media screen and (max-width: 812px) {
+@media screen and (max-width: 631px) {
   .container-card{
+    width: 100%;
+    margin: 0;
     grid-template-columns: 1fr;
-    width: 282px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .container-card {
+    width                : 282px;
+    margin               : 0;
+    grid-template-columns: 1fr;
   }
 }

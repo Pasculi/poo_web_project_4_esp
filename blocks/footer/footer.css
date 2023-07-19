@@ -1,5 +1,5 @@
 .footer {
-  width         : 100%;
+  display: flex;
   margin-top    : 68px;
   color         : #545454;
   font-style    : normal;
@@ -14,6 +14,7 @@
     width       : 36.375rem;
     align-items : flex-start;
     padding-left: 27px;
+    justify-content: center;
   }
 }
 

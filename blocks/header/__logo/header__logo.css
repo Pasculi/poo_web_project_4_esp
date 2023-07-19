@@ -3,8 +3,3 @@
     padding-left: 27px;
   }
 }
-@media screen and (max-width: 812px) {
-  .header__logo {
-    padding-left: 0;
-  }
-}

@@ -1,14 +1,19 @@
 .root{
-  position: relative;
-  background-color: var(--color-background-primary);
   width       : 100vw;
+  display: inline-block;
+  position: relative;
+  justify-content: center;
+  background-color: var(--color-background-primary);
   box-sizing      : border-box;
   font-family     : 'Inter',
     sans-serif;
+
 }
 
-@media screen and (max-width:812px){
+
+@media screen and (max-width: 768px) {
   .root{
-    width: 812px;
+    width: 100%;
+    margin: 0;
   }
 }

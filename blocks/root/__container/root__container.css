@@ -1,14 +1,16 @@
 .root__container {
-  max-width: 886px;
+  width: 886px;
   margin   : auto;
 }
 
-@media screen and (max-width:886px) {
+@media screen and (max-width:769px) {
   .root__container {
     display        : flex;
+    width: fit-content;
     flex-direction : column;
     justify-content: center;
     align-items    : center;
+    margin: 0 auto;
 
   }
 }
