@@ -47,3 +47,22 @@ const renderCardInitial = () => {
 }
 renderCardInitial()
 
+
+
+/*Función para mostrar popup-Images */
+const popupImages = Array.from(document.querySelectorAll('.card__place-image-place'));
+/* function popupImages() {
+
+} */
+popupImages.forEach(popupImage => {
+  const urlPlace = document.querySelector('.popup-image__url');
+  console.log("🚀 ~ file: index.js:59 ~ urlPlace:", urlPlace)
+  popupImage.addEventListener('click', () => {
+    console.log(`${initialCards.link}`)
+    urlPlace.setAttribute('src', `${initialCards.link}`);
+    const popup = popupImage.classList.add('popup--show');
+    console.log(popup)
+  })
+})
+
+console.log(openImage)
