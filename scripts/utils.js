@@ -24,6 +24,33 @@ const buttonDeleteCard = (evt) => {
   evt.target.parentNode.parentNode.remove();
 }
 
+/*Abrir y cerrar Popup_Form*/
+const editProfile = document.querySelector('.profile__author-button--edit');
+const editPlace = document.querySelector('.profile__author-button--add-place');
+const popupCloseProfile = document.querySelector('.popup__button-close-profile');
+const popupClosePlace = document.querySelector('.popup__button-close-place');
+const popupForm = Array.from(document.querySelectorAll('.popup'));
+
+function showPopup() {
+  popupForm.forEach(popup => {
+    popup.classList.add('popup--show');
+  })
+}
+function closePopup() {
+  popupForm.forEach(popup => {
+    popup.classList.remove('popup--show');
+  })
+}
+editProfile.addEventListener('click', showPopup);
+editPlace.addEventListener('click', showPopup);
+popupCloseProfile.addEventListener('click', closePopup);
+popupClosePlace.addEventListener('click', closePopup);
+document.addEventListener('keydown', evt => {
+  if (evt.key === 'Escape') {
+    closePopup()
+  }
+});
+/*Abrir y cerrar Popup_Form*/
 
 
-export { opacityButtons, buttonLike, buttonDeleteCard };
+export { showPopup, closePopup, opacityButtons, buttonLike, buttonDeleteCard };

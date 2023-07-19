@@ -20,7 +20,7 @@ const initialCards = [
   },
   {
     name: "Antofagasta",
-    link: "https://visitchile.imgix.net/destinos/320_Antofagasta1.jpg?w=960&h=448&fit=crop&q=auto&auto=format",
+    link: "https://www.holidayinnexpress.cl/wp-content/uploads/2017/08/destacada_antofagasta.jpg",
   },
   {
     name: "Ciudad de Arica",
@@ -47,37 +47,3 @@ const renderCardInitial = () => {
 }
 renderCardInitial()
 
-/*Abrir y cerrar Popup_Form*/
-const editProfile = document.querySelector('.profile__author-button--edit');
-const editPlace = document.querySelector('.profile__author-button--add-place');
-const popupProfile = document.querySelector('.popup-profile');
-const popupPlace = document.querySelector('.popup-place');
-const popupCloseProfile = document.querySelector('.popup__button-close-profile');
-const popupClosePlace = document.querySelector('.popup__button-close-place');
-
-const showPopupProfile = () => {
-  popupProfile.classList.add('popup--show')
-}
-const showPopupPlace = () => {
-  popupPlace.classList.add('popup--show')
-}
-editProfile.addEventListener('click', showPopupProfile);
-editPlace.addEventListener('click', showPopupPlace);
-
-
-const closePopupProfile = () => {
-  popupProfile.classList.remove('popup--show');
-}
-const closePopupPlace = () => {
-  popupPlace.classList.remove('popup--show');
-}
-popupCloseProfile.addEventListener('click', closePopupProfile);
-popupClosePlace.addEventListener('click', closePopupPlace);
-
-document.addEventListener('keydown', evt => {
-  if (evt.key === 'Escape') {
-    closePopupProfile()
-    closePopupPlace()
-  }
-});
-/*Abrir y cerrar Popup_Form*/
