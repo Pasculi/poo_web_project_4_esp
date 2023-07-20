@@ -29,6 +29,7 @@ const editProfile = document.querySelector('.profile__author-button--edit');
 const editPlace = document.querySelector('.profile__author-button--add-place');
 const popupCloseProfile = document.querySelector('.popup__button-close-profile');
 const popupClosePlace = document.querySelector('.popup__button-close-place');
+const popupCloseImage = document.querySelector('.popup-image__button-close-image');
 const popupForm = Array.from(document.querySelectorAll('.popup'));
 
 function showPopup() {
@@ -45,6 +46,7 @@ editProfile.addEventListener('click', showPopup);
 editPlace.addEventListener('click', showPopup);
 popupCloseProfile.addEventListener('click', closePopup);
 popupClosePlace.addEventListener('click', closePopup);
+popupCloseImage.addEventListener('click', closePopupImage);
 document.addEventListener('keydown', evt => {
   if (evt.key === 'Escape') {
     closePopup()
@@ -52,5 +54,20 @@ document.addEventListener('keydown', evt => {
 });
 /*Abrir y cerrar Popup_Form*/
 
+/*Funcion para desplagar una imagen */
+const popupImage = document.querySelector('.popup-image')
+function openPopupImage(){
+  popupImage.classList.add('popup-image--show')
+}
+function closePopupImage() {
+  popupImage.classList.remove('popup-image--show');
 
-export { showPopup, closePopup, opacityButtons, buttonLike, buttonDeleteCard };
+}
+
+document.addEventListener('keydown', evt => {
+  if (evt.key === 'Escape') {
+    closePopupImage()
+  }
+});
+
+export { openPopupImage, closePopupImage, showPopup, closePopup, opacityButtons, buttonLike, buttonDeleteCard };

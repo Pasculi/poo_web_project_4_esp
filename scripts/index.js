@@ -1,4 +1,4 @@
-import { opacityButtons, buttonLike, buttonDeleteCard } from "./utils.js"
+import { openPopupImage, closePopupImage, opacityButtons, buttonLike, buttonDeleteCard } from "./utils.js"
 
 opacityButtons()
 const initialCards = [
@@ -39,8 +39,18 @@ const renderCardInitial = () => {
     dataCard.querySelector('.card__place-button--delete').addEventListener('click', buttonDeleteCard);//Llamamos a la funcion eliminar card
     dataCard.querySelector('.card__place-name').textContent = initialCard.name;
     dataCard.querySelector('.card__place-image-place').setAttribute("src", initialCard.link);
+    dataCard.querySelector('.card__place-image-place').addEventListener('click', openPopupImage);
     dataCard.querySelector('.card__place-image-place').setAttribute("alt", initialCard.name);
     dataCard.querySelector(".card__place-button--like").addEventListener("click", buttonLike);//Lllamamos a la funcion de dar like
+    /*Mostrar imágenes */
+    dataCard.querySelector('.card__place-image-place').addEventListener("click", () => {
+      const popupUrl = document.querySelector('.popup-image__url');
+      const popupName = document.querySelector('.popup-image__name-place');
+      popupUrl.setAttribute('src', initialCard.link);
+      popupUrl.setAttribute('alt', initialCard.name);
+      popupName.textContent = initialCard.name;
+      console.log(popupName.textContent = initialCard.name)
+    })
     //Pintamos las Card en container-card
     cardContainer.prepend(dataCard);
   })
@@ -48,21 +58,3 @@ const renderCardInitial = () => {
 renderCardInitial()
 
 
-
-/*Función para mostrar popup-Images */
-const popupImages = Array.from(document.querySelectorAll('.card__place-image-place'));
-/* function popupImages() {
-
-} */
-popupImages.forEach(popupImage => {
-  const urlPlace = document.querySelector('.popup-image__url');
-  console.log("🚀 ~ file: index.js:59 ~ urlPlace:", urlPlace)
-  popupImage.addEventListener('click', () => {
-    console.log(`${initialCards.link}`)
-    urlPlace.setAttribute('src', `${initialCards.link}`);
-    const popup = popupImage.classList.add('popup--show');
-    console.log(popup)
-  })
-})
-
-console.log(openImage)
