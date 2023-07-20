@@ -30,22 +30,25 @@ const editPlace = document.querySelector('.profile__author-button--add-place');
 const popupCloseProfile = document.querySelector('.popup__button-close-profile');
 const popupClosePlace = document.querySelector('.popup__button-close-place');
 const popupCloseImage = document.querySelector('.popup-image__button-close-image');
-const popupForm = Array.from(document.querySelectorAll('.popup'));
+const popupProfile = document.querySelectorAll('.popup-profile');
+const popupPlace = document.querySelectorAll('.popup-place');
 
-function showPopup() {
-  popupForm.forEach(popup => {
-    popup.classList.add('popup--show');
-  })
+function showPopupProfile() {
+  popupProfile.classList.add('popup--show');
 }
-function closePopup() {
-  popupForm.forEach(popup => {
-    popup.classList.remove('popup--show');
-  })
+function closePopupProfile() {
+  popupProfile.classList.remove('popup--show');
 }
-editProfile.addEventListener('click', showPopup);
-editPlace.addEventListener('click', showPopup);
-popupCloseProfile.addEventListener('click', closePopup);
-popupClosePlace.addEventListener('click', closePopup);
+function showPopupPlace() {
+  popupPlace.classList.add('popup--show');
+}
+function closePopupPlace() {
+  popupPlace.classList.remove('popup--show');
+}
+editProfile.addEventListener('click', showPopupProfile);
+editPlace.addEventListener('click', showPopupPlace);
+popupCloseProfile.addEventListener('click', closePopupProfile);
+popupClosePlace.addEventListener('click', closePopupPlace);
 popupCloseImage.addEventListener('click', closePopupImage);
 document.addEventListener('keydown', evt => {
   if (evt.key === 'Escape') {
@@ -70,4 +73,4 @@ document.addEventListener('keydown', evt => {
   }
 });
 
-export { openPopupImage, closePopupImage, showPopup, closePopup, opacityButtons, buttonLike, buttonDeleteCard };
+export { openPopupImage, closePopupImage, showPopupProfile, closePopupProfile, showPopupPlace, closePopupPlace, opacityButtons, buttonLike, buttonDeleteCard };

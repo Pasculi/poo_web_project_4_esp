@@ -49,7 +49,6 @@ const renderCardInitial = () => {
       popupUrl.setAttribute('src', initialCard.link);
       popupUrl.setAttribute('alt', initialCard.name);
       popupName.textContent = initialCard.name;
-      console.log(popupName.textContent = initialCard.name)
     })
     //Pintamos las Card en container-card
     cardContainer.prepend(dataCard);

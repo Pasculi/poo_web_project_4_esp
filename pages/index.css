@@ -33,7 +33,6 @@
 
 
 /*CARDS*/
-@import url(../blocks/card/card.css);
 @import url(../blocks/card/__place/card__place.css);
 @import url(../blocks/card/__place/card__place-button--delete.css);
 @import url(../blocks/card/__place/card__place-image-place.css);
