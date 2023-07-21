@@ -1,5 +1,6 @@
-import { openPopupImage, opacityButtons, buttonLike, buttonDeleteCard } from "./utils.js"
+import {  openPopupImage, opacityButtons, buttonLike, buttonDeleteCard } from "./utils.js"
 import { config, enableValidation } from "./fromValidator.js"
+
 
 opacityButtons()
 enableValidation(config)

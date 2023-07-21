@@ -1,3 +1,6 @@
+import { config } from "./fromValidator.js"
+
+
 /*Función que aplica opacidad a los botones editar, añadir lugar y a las X de cerrar */
 const btns = Array.from(document.querySelectorAll('.btn'));
 const opacityButtons = () => {
@@ -35,7 +38,6 @@ const popupPlace = document.querySelector('.popup-place');
 
 function showPopupProfile() {
   popupProfile.classList.add('popup--show');
-  console.log('Mostrar')
 }
 function closePopupProfile() {
   popupProfile.classList.remove('popup--show');
@@ -60,7 +62,7 @@ document.addEventListener('keydown', evt => {
 
 /*Funcion para desplagar una imagen */
 const popupImage = document.querySelector('.popup-image')
-function openPopupImage(){
+function openPopupImage() {
   popupImage.classList.add('popup-image--show')
 }
 function closePopupImage() {
@@ -73,5 +75,16 @@ document.addEventListener('keydown', evt => {
     closePopupImage()
   }
 });
+
+/*Cambiar Nombre de Perfil y Acerca de en Perfil*/
+function popupEditProfile() {
+const inputsElements = Array.from(document.querySelectorAll(config.inputSelector))
+inputsElements.forEach(inputElement => {
+  inputElement.addEventListener('input', evt => {
+    console.log(evt.target.value)
+  })
+})
+}
+popupEditProfile()
 
 export { openPopupImage, closePopupImage, showPopupProfile, closePopupProfile, showPopupPlace, closePopupPlace, opacityButtons, buttonLike, buttonDeleteCard };

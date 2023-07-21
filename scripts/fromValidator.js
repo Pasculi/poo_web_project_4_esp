@@ -8,11 +8,10 @@ export const config = {
 };
 
 const showInputError = (formElement, inputElement, errorMessage, config) => {
-  console.log(inputElement.id)
   const inputError = formElement.querySelector(`.${inputElement.id}_error`);
   inputElement.classList.add(config.inputErrorClass);
   inputError.textContent = errorMessage;
-  inputError.classList.add(config.errorClass)
+  inputError.classList.add(config.errorClass);
 }
 
 const hideInputError = (formElement, inputElement, config) => {
@@ -24,10 +23,10 @@ const hideInputError = (formElement, inputElement, config) => {
 }
 const checkValidityInput = (formElement, inputElement, config) => {
   if (!inputElement.validity.valid) {
-    console.log(inputElement.validity.valid)
+
     showInputError(formElement, inputElement, inputElement.validationMessage, config)
   } else {
-    console.log(inputElement.validity.valid)
+
     hideInputError(formElement, inputElement, config)
   }
 }
@@ -51,7 +50,6 @@ const setEventListeners = (formElement, config) => {
   const inputs = Array.from(formElement.querySelectorAll(config.inputSelector));
 
   const buttonElement = formElement.querySelector(config.submitButtonSelector);
-  console.log(buttonElement)
   toggleButtonState(inputs, buttonElement, config)
   inputs.forEach(inputElement => {
     inputElement.addEventListener('input', () => {

@@ -8,6 +8,7 @@
   background-color: #000000;
   border-radius   : .125rem;
   font-size: 1.125rem;
+  margin-bottom:20px;
 }
 
 .popup__button:hover {
