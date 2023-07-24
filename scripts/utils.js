@@ -94,7 +94,7 @@ inputsElements.forEach(inputElement => {
 })
 }
 popupEditProfile()
-buttonProfile.addEventListener('submit', closePopupProfile)
+buttonProfile.addEventListener('click', closePopupProfile)
 
 
 
