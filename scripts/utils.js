@@ -77,14 +77,25 @@ document.addEventListener('keydown', evt => {
 });
 
 /*Cambiar Nombre de Perfil y Acerca de en Perfil*/
+const buttonProfile = document.querySelector('.popup__button-profile')
 function popupEditProfile() {
+  const nameProfile = document.querySelector('.profile__author');
+  const activitProfile = document.querySelector('.profile__activit');
 const inputsElements = Array.from(document.querySelectorAll(config.inputSelector))
 inputsElements.forEach(inputElement => {
   inputElement.addEventListener('input', evt => {
-    console.log(evt.target.value)
+    if (evt.target.id === 'popup__input-profile') {
+      nameProfile.textContent = evt.target.value.trim();
+    }
+    else if (evt.target.id === 'popup__input-about') {
+      activitProfile.textContent = evt.target.value.trim();
+    }
   })
 })
 }
 popupEditProfile()
+buttonProfile.addEventListener('submit', closePopupProfile)
+
+
 
 export { openPopupImage, closePopupImage, showPopupProfile, closePopupProfile, showPopupPlace, closePopupPlace, opacityButtons, buttonLike, buttonDeleteCard };
