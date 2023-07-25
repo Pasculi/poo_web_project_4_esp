@@ -1,5 +1,6 @@
 import {  openPopupImage, opacityButtons, buttonLike, buttonDeleteCard } from "./utils.js"
 import { config, enableValidation } from "./fromValidator.js"
+/* import { Card } from "./card.js" */
 
 
 opacityButtons()
@@ -36,6 +37,8 @@ const renderCardInitial = () => {
 
   const cardContainer = document.querySelector(".container-card");//Donde se renderizarán las Card
   const templatecard = document.querySelector('.card');//Seleccionamos la etiqueta template
+
+
   initialCards.forEach(initialCard => {
     const dataCard = templatecard.content.cloneNode(true);//Clonamos el contenido de template
     /*Seleccionamos cada elemento de la card y los cambiamos dinámicamente */

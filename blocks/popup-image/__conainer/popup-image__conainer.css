@@ -1,3 +1,5 @@
 .popup-image__conainer{
-  width:580px
+  display: flex;
+  justify-items: center;
+    width:580px
 }
