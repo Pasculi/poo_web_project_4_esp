@@ -1,3 +1,7 @@
+const popupImage = document.querySelector('.popup-image');
+const popupUrl = document.querySelector('.popup-image__url');
+const popupCloseImage = document.querySelector('.popup-image__button-close-image');
+
 export default class Card {
   constructor(data, cardSelector) {
     this._name = data.name;
@@ -13,6 +17,7 @@ export default class Card {
   }
   generateCard() {
     this._element = this._getTemplate();
+    this._setEventListeners();
     // Añadir datos
     this._element.querySelector('.card__place-name').textContent = this._name;
     this._element.querySelector('.card__place-image-place').setAttribute("src", this._link);
@@ -23,7 +28,22 @@ export default class Card {
     return this._element;
 
   }
-
+  _handleOpenPopup() {
+    this._link.setAttribute = ('src', popupUrl);
+    popupImage.classList.add('popup--show');
+  }
+  _handleClosePopup() {
+    this._link.setAttribute = ('src', '');
+    popupImage.classList.remove('popup--show');
+  }
+  _setEventListeners() {
+    this._element.addEventListener('click', () => {
+      this._handleOpenPopup();
+    })
+    popupCloseImage.addEventListener('click', () => {
+      this._handleClosePopup();
+    })
+  }
 }
 
 initialCards.forEach(data => {

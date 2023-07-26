@@ -81,17 +81,17 @@ const buttonProfile = document.querySelector('.popup__button-profile')
 function popupEditProfile() {
   const nameProfile = document.querySelector('.profile__author');
   const activitProfile = document.querySelector('.profile__activit');
-const inputsElements = Array.from(document.querySelectorAll(config.inputSelector))
-inputsElements.forEach(inputElement => {
-  inputElement.addEventListener('input', evt => {
-    if (evt.target.id === 'popup__input-profile') {
-      nameProfile.textContent = evt.target.value.trim();
-    }
-    else if (evt.target.id === 'popup__input-about') {
-      activitProfile.textContent = evt.target.value.trim();
-    }
+  const inputsElements = Array.from(document.querySelectorAll(config.inputSelector))
+  inputsElements.forEach(inputElement => {
+    inputElement.addEventListener('input', evt => {
+      if (evt.target.id === 'popup__input-profile') {
+        nameProfile.textContent = evt.target.value.trim();
+      }
+      else if (evt.target.id === 'popup__input-about') {
+        activitProfile.textContent = evt.target.value.trim();
+      }
+    })
   })
-})
 }
 popupEditProfile()
 buttonProfile.addEventListener('click', closePopupProfile)
