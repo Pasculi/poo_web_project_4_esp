@@ -41,12 +41,16 @@ function showPopupProfile() {
 }
 function closePopupProfile() {
   popupProfile.classList.remove('popup--show');
+  document.querySelector("#popup__input-profile").value = "";
+  document.querySelector("#popup__input-about").value = "";
 }
 function showPopupPlace() {
   popupPlace.classList.add('popup--show');
 }
 function closePopupPlace() {
   popupPlace.classList.remove('popup--show');
+  document.querySelector("#popup__input-place").value = "";
+  document.querySelector("#popup__input-url").value = "";
 }
 editProfile.addEventListener('click', showPopupProfile);
 editPlace.addEventListener('click', showPopupPlace);
@@ -58,7 +62,6 @@ document.addEventListener('keydown', evt => {
     closePopup()
   }
 });
-/*Abrir y cerrar Popup_Form*/
 
 
 /*Funcion para desplagar una imagen */
