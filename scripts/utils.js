@@ -1,6 +1,5 @@
 import { config } from "./fromValidator.js"
-
-
+import Card from "./card.js"
 
 /*Función que aplica opacidad a los botones editar, añadir lugar y a las X de cerrar */
 const btns = Array.from(document.querySelectorAll('.btn'));
@@ -60,6 +59,7 @@ document.addEventListener('keydown', evt => {
   }
 });
 /*Abrir y cerrar Popup_Form*/
+
 
 /*Funcion para desplagar una imagen */
 const popupImage = document.querySelector('.popup-image')

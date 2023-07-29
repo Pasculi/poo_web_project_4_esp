@@ -1,4 +1,4 @@
-import {  opacityButtons } from "./utils.js";
+import { closePopupPlace, opacityButtons } from "./utils.js";
 import { config, enableValidation } from "./fromValidator.js";
 import Card from "./card.js"
 
@@ -37,7 +37,20 @@ initialCards.forEach(initialCard => {
   cardElement.appendChild(card.render())
 })
 
-/* const cardElement = document.querySelector('.container-card'); */
+
+/*Función para Guardar una Imagen*/
+const savePlace = document.querySelector(".popup__button-place");
+function savePlaces() {
+  const name = document.querySelector("#popup__input-place").value;
+  const link = document.querySelector("#popup__input-url").value;
+  const cardNueva = new Card('.card', { name, link });
+  cardElement.prepend(cardNueva.render());
+  closePopupPlace();
+  render(initialCards);
+}
+
+savePlace.addEventListener("click", savePlaces);
+
 const cardNueva = new Card('.card', { name: 'Villarrica', link: 'https://www.chileplayas.cl/wp-content/uploads/2014/04/playa-grande-villarrica.jpg' });
 cardElement.prepend(cardNueva.render());
 
