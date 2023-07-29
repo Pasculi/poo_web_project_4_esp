@@ -28,14 +28,13 @@ export default class Card {
     evt.target.closest('.card__place').remove();
   }
   _handleOpenPopupImage() {
-    const popupImage = this._node.querySelector('.popup-image')
-    this._node.querySelector('.popup-image__url').src = this._link;
-    this._node.querySelector('.popup-image__name-place').alt = this._name;
-    this._node.querySelector('.popup-image__name-place').textContent = this._name;
+    const popupImage = document.querySelector('.popup-image');
+    console.log(popupImage);
+    popupImage.querySelector('.popup-image__url').setAttribute("src", this._link)
+    popupImage.querySelector('.popup-image__name-place').setAttribute("src", this._name);
+    popupImage.querySelector('.popup-image__name-place').textContent = this._name;
     popupImage.classList.add('popup-image--show');
-    console.log('Hola')
-
-  }
+ }
   _setEventListeners() {
     this._node.querySelector(".card__place-button--like").addEventListener("click", (evt) => this._handleButtonLike(evt));
 
@@ -45,3 +44,4 @@ export default class Card {
   }
 
 }
+

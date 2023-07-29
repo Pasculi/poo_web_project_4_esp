@@ -37,7 +37,9 @@ initialCards.forEach(initialCard => {
   cardElement.appendChild(card.render())
 })
 
-
+/* const cardElement = document.querySelector('.container-card'); */
+const cardNueva = new Card('.card', { name: 'Villarrica', link: 'https://www.chileplayas.cl/wp-content/uploads/2014/04/playa-grande-villarrica.jpg' });
+cardElement.prepend(cardNueva.render());
 
 export { initialCards }
 

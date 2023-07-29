@@ -9,11 +9,12 @@
   transition : opacity .6s;
   opacity: 0;
   justify-content: center;
+  z-index: -10;
 
 
 }
 .popup-image--show{
   transition : opacity .6s;
   opacity:1;
-
+  z-index: 10;
 }

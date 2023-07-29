@@ -1,6 +1,7 @@
 import { config } from "./fromValidator.js"
 
 
+
 /*Función que aplica opacidad a los botones editar, añadir lugar y a las X de cerrar */
 const btns = Array.from(document.querySelectorAll('.btn'));
 const opacityButtons = () => {
@@ -95,7 +96,6 @@ function popupEditProfile() {
 }
 popupEditProfile()
 buttonProfile.addEventListener('click', closePopupProfile)
-
 
 
 export { openPopupImage, closePopupImage, showPopupProfile, closePopupProfile, showPopupPlace, closePopupPlace, opacityButtons, buttonLike, buttonDeleteCard };
