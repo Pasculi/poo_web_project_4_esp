@@ -1,7 +1,6 @@
-import {  openPopupImage, opacityButtons, buttonLike, buttonDeleteCard } from "./utils.js"
-import { config, enableValidation } from "./fromValidator.js"
-/* import { Card } from "./card.js" */
-
+import {  opacityButtons } from "./utils.js";
+import { config, enableValidation } from "./fromValidator.js";
+import Card from "./card.js"
 
 opacityButtons()
 enableValidation(config)
@@ -31,35 +30,14 @@ const initialCards = [
     link: "https://q-xx.bstatic.com/xdata/images/city/600x480/671802.jpg?k=f2af7c265359c6bfef67dd8137aae05a987d3df4208c8423068a807acc405ad3&o=",
   },
 ];
-/* FUNCION PARA CARGAR CARDS INICIALES */
 
-const renderCardInitial = () => {
+const cardElement = document.querySelector('.container-card');
+initialCards.forEach(initialCard => {
+  const card = new Card('.card', initialCard)
+  cardElement.appendChild(card.render())
+})
 
-  const cardContainer = document.querySelector(".container-card");//Donde se renderizarán las Card
-  const templatecard = document.querySelector('.card');//Seleccionamos la etiqueta template
 
 
-  initialCards.forEach(initialCard => {
-    const dataCard = templatecard.content.cloneNode(true);//Clonamos el contenido de template
-    /*Seleccionamos cada elemento de la card y los cambiamos dinámicamente */
-    dataCard.querySelector('.card__place-button--delete').addEventListener('click', buttonDeleteCard);//Llamamos a la funcion eliminar card
-    dataCard.querySelector('.card__place-name').textContent = initialCard.name;
-    dataCard.querySelector('.card__place-image-place').setAttribute("src", initialCard.link);
-    dataCard.querySelector('.card__place-image-place').addEventListener('click', openPopupImage);
-    dataCard.querySelector('.card__place-image-place').setAttribute("alt", initialCard.name);
-    dataCard.querySelector(".card__place-button--like").addEventListener("click", buttonLike);//Lllamamos a la funcion de dar like
-    /*Mostrar imágenes */
-    dataCard.querySelector('.card__place-image-place').addEventListener("click", () => {
-      const popupUrl = document.querySelector('.popup-image__url');
-      const popupName = document.querySelector('.popup-image__name-place');
-      popupUrl.setAttribute('src', initialCard.link);
-      popupUrl.setAttribute('alt', initialCard.name);
-      popupName.textContent = initialCard.name;
-    })
-    //Pintamos las Card en container-card
-    cardContainer.prepend(dataCard);
-  })
-}
-renderCardInitial()
-
+export { initialCards }
 
